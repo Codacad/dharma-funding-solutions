@@ -1,0 +1,132 @@
+:root{
+  /* Color/background */
+  --primary-text:hsla(186 , 99% , 21% , 1);
+  --primary-bg:hsla(186 , 99% , 21% , 1);
+  --almost-black:hsl(0, 0%, 8%);
+  --medium-gray:hsl(0, 0%, 41%);
+
+  /* Font families */
+  --exo-2:"Exo 2", sans-serif;
+  --Montserrat:"Montserrat", sans-serif;
+  --Poppins:'Poppins', sans-serif;
+}
+
+div.navbar nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 5%;
+  background-color: #fff;
+}
+nav div.logo-navlinks{
+  display: flex;
+  align-items: center;
+}
+div.logo-navlinks a.logo{
+  width: 100px;
+}
+div.logo-navlinks ul.nav-list{
+  display: flex;
+  gap: 20px;
+  margin-left: 30px;
+  text-align: center;
+
+}
+div.logo-navlinks ul.nav-list li{
+  position: relative;
+}
+div.logo-navlinks ul.nav-list:last-child{
+  display: flex;
+  align-items: center;
+}
+div.logo-navlinks ul.nav-list li a{
+  display: flex;
+  align-items: center;  
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  position: relative;
+  padding: 5px;
+  color: var(--medium-gray);
+  opacity: .8;
+}
+div.logo-navlinks ul.nav-list li a:hover{
+ opacity: 1;
+}
+div.logo-navlinks ul.nav-list li a::after{
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  border-radius: 1px;
+  bottom: -2px;
+  left: 0;
+  display: block;
+  background-color: var(--primary-bg);
+  transition: width 200ms ease-in-out;
+}
+div.logo-navlinks ul.nav-list li a:hover:after{
+  width: 100%;
+  transition: width 200ms ease-in-out;
+}
+div.logo-navlinks ul.nav-list li a span{
+  margin-right: 5px;
+}
+ul.nav-list li div.dropdown-wrapper{
+  position: absolute;
+  top: -1000px;
+  left: 0;
+  min-width: 270px;    
+  z-index: 10;
+  transform: translateY(-20px);
+  transition: transform 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  padding-top: 10px;
+}
+ul.nav-list li:hover div.dropdown-wrapper{
+  top: 30px;
+  transform: translateY(0);
+  transition: transform 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+ul.nav-list li div.dropdown-wrapper ul{
+  padding: 10px;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0px 0px 20px 5px rgba(0,0,0,.1);
+  border-radius: 5px;
+}
+ul.nav-list li div.dropdown-wrapper ul li a{
+  display: flex;
+  align-items:center;
+  padding: 10px;
+  text-align: left;
+  color: var(--medium-gray);
+}
+ul.nav-list li div.dropdown-wrapper ul li a img{
+  width: 20px;
+  height: 15px;
+  margin-right: 10px;
+}
+ul.nav-list li div.dropdown-wrapper ul li a:hover{
+  background-color: rgba(0,0,0,.1);
+}
+ul.nav-list li div.dropdown-wrapper ul li a::after{
+  display: none;
+}
+
+nav div.button button{
+  display: flex;
+  align-items: center;
+  font-size: medium;
+  font-weight: 400;
+  background-color: var(--primary-bg);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 3px;
+  box-shadow: 0px 0px 2px rgba(0,0,0,.5);
+  font-family: 'Exo 2', sans-serif;
+  transition: opacity 200ms ease-in-out;
+}
+nav div.button button:hover{
+  opacity: .9;
+  transition: opacity 200ms ease-in-out;
+}

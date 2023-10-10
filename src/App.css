@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&family=Exo+2:wght@400;700&family=Montserrat:wght@400;600;700&family=Poppins:wght@400;700&display=swap');
+/* font-family: 'Epilogue', sans-serif;
+font-family: 'Exo 2', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Poppins', sans-serif; */
+
+.app{
+  font-family: 'Epilogue', sans-serif;
+  font-size: 18px;
+  background-color: #eee;
+}
